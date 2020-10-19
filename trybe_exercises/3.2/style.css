@@ -1,0 +1,26 @@
+.mudar-fonte{
+    font-family: sans-serif;
+}
+p{
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+}
+body{
+    font-size: 16px;
+}
+.list-color{
+    background-color:white;
+    font-style: italic;
+    line-height: 40px;
+    text-decoration: underline;
+}
+#amarelo{
+    background-color: yellow;
+}
+#vermelho{
+    background-color: red;
+}
+#marrom{
+    background-color: brown;
+}
