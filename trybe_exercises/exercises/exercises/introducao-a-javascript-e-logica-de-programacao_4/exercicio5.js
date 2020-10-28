@@ -4,6 +4,7 @@ let disney = {
     nota: "Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPatinhas",
     recorrente: "sim",
 }
+
 let info = {
     personagem: "Margarida",
     origem: "Pato Donald",
