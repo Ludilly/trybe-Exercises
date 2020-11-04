@@ -69,3 +69,42 @@ function diasDoMes(){
       holidayBtn('Feriado');
 
   //exercicio3
+
+  function mudaCor () {
+
+    let btnFeriado = document.querySelector('#btn-holiday');
+
+    let pegaFeriados = document.querySelectorAll('.holiday');
+
+    let corDeFundo = 'rgb(238,238,238)';
+
+    let novaCor = 'white';
+
+    btnFeriado.addEventListener('click', function() {
+
+      for (let index = 0; index < pegaFeriados.length;index +=1 ){
+        if (pegaFeriados[index].style.backgroundColor === novaCor){
+
+          pegaFeriados[index].style.backgroundColor = corDeFundo;
+
+        } else {
+          pegaFeriados[index].style.backgroundColor = novaCor;
+        }
+      }
+    })
+  };
+
+  mudaCor();
+
+  //exercicio4
+
+  function botaoSexta (newName){
+    let btnCont = document.querySelector('.buttons-container');
+    let newButton = document.createElement('button');
+    let newId = 'btn-friday';
+
+      newButton.innerHTML = newName;
+      newButton.id = newId;
+      btnCont.appendChild(newButton);
+  };
+    botaoSexta('Sexta-feira');
