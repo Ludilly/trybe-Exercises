@@ -108,3 +108,27 @@ function diasDoMes(){
       btnCont.appendChild(newButton);
   };
     botaoSexta('Sexta-feira');
+
+    //exercicio 5
+
+    function novaFuncao (sextaArrys){
+
+      let btnSexta = document.querySelector('#btn-friday');
+  
+      let friday = document.getElementsByClassName('friday-day')
+  
+      let sextou = 'SEXTOU!!';
+  
+      btnSexta.addEventListener('click', function() {
+        for(let index = 0; index < friday.length; index += 1){
+          if (friday[index].innerHTML !== sextou){
+            friday[index].innerHTML = sextou;
+          }else{
+            friday[index].innerHTML = sextaArrys[index];
+          }
+        }
+      })
+    };
+  
+    let dayFriday = [4, 11, 18, 25];
+      novaFuncao(dayFriday);
