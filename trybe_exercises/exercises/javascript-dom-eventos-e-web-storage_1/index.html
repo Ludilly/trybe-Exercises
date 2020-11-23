@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+     // exercicio1
+     function changeName(){
+
+       let paragrafo = document.getElementsByTagName('p')[1];
+       paragrafo.innerHTML = "aprender outras linguas de programação e ganhar dinheiro"
+
+     }
+     changeName();
+     //exercicio 2
+      function changeColor(){
+        let amarelo = document.getElementsByClassName("main-content")[0];
+        amarelo.style.background = "rgb(76,164,109)";
+
+      }
+      changeColor();
+      // exercicio 3
+      function mudaCor(){
+        let vermelho = document.getElementsByClassName("center-content")[0];
+        vermelho.style.background = "white";
+      }
+      mudaCor();
+      //exercicio 4 
+      function correcao(){
+        let corrigir = document.getElementsByTagName('h1')[0];
+        corrigir.innerHTML = "Exercício 5.1 - JavaScript";
+      }
+      correcao();
+      //exercicio 5
+      function mudaTexto(){
+        let mudarTexto = document.getElementsByTagName('p')[0];
+        mudarTexto.innerHTML = mudarTexto.innerHTML.toUpperCase();
+
+      }
+      mudaTexto();
+      //exercicio 6
+      function tagCons(){
+        let conteudo = document.getElementsByTagName('p');
+        for (let index = 0; index < conteudo.length; index += 1){
+          console.log(conteudo[index].innerHTML);
+        }  
+      }
+      tagCons();
+    </script>
+  </body>
+</html>
