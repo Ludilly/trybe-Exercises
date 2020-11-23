@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        //exercicio 1
+
+        let head1 = document.createElement ('h1');
+
+        document.body.appendChild(head1);
+
+        head1.innerHTML = " Exercício 5.2 - JavaScript DOM ";
+
+        //exercicio 2
+
+        let div = document.createElement('div');
+
+        document.body.appendChild(div);
+
+        div.class = "main-content";
+
+      //exercicio 3
+
+        let secondContent = document.createElement('div');
+
+        div.class = "center-content";
+
+        div.appendChild(secondContent);
+
+        //exercicio 4
+
+        let paragrafo = document.createElement('p');
+
+        secondContent.appendChild(paragrafo);
+
+        paragrafo.innerHTML = "Exercicio sobre DOM e populando HTML";
+
+        //exercicio 5
+
+        let otherContent = document.createElement('div');
+
+        div.appendChild(otherContent);
+
+        div.class = "left-content";
+
+
+        //execicio 6
+
+        let newContent = document.createElement('div');
+
+        div.appendChild(newContent);
+
+        div.class = "right-content";
+        
+        //exercicio 7
+
+        let imagem = document.createElement('img');
+
+        imagem.src = "https://picsum.photos/200";
+
+        imagem.class = "small-image";
+
+        otherContent.appendChild(imagem);
+
+        //exercicio 8
+
+        let listaUl = document.createElement('ul');
+
+        newContent.appendChild(listaUl);
+
+        let arrayNum = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+
+        for (let num in arrayNum){
+            let elementLi = document.createElement('li');
+
+            elementLi.innerHTML = arrayNum[num];
+
+            listaUl.appendChild(elementLi);
+        }
+        
+        //exercicio 9
+
+        let head3 = document.createElement('h3');
+
+        div.appendChild(head3);
+
+        let head2 = document.createElement('h3');
+
+        div.appendChild(head2);
+
+        let head4 = document.createElement('h3');
+
+        div.appendChild(head4);
+
+        // exercicio parte 2
+            //1
+
+        head1.class = "title";
+
+            //2
+
+        head2.class = "description"
+
+        head3.class = "description"
+
+        head4.class = "description"
+
+            //3
+
+        let divLeftContent = document.getElementsByClassName('.left-content');
+
+        div.removeChild(divLeftContent);
+
+
+    </script>
+  </body>
+</html>
