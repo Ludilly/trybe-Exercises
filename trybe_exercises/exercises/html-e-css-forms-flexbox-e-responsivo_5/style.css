@@ -1,0 +1,40 @@
+body {
+    padding: 0px;
+    margin: 0px;
+
+}
+h1 {
+
+}
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    
+}
+
+@media screen and (max-width: 375px){
+    .paragrafo{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 35px;
+    }
+    .picture{
+        display: flex;
+        flex-wrap: wrap;
+        float: left;
+        width: 40%;
+        padding: 10px;
+    }
+    body{
+        margin: 0 20px;
+        background-color: #e8eee8;
+    }
+}
